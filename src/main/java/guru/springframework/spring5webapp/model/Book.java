@@ -28,9 +28,22 @@ public class Book {
         this.isbn = isbn;
     }
 
+    public Book(String title, String isbn, Publisher publisher) {
+        this.title = title;
+        this.isbn = isbn;
+        this.publisher = publisher;
+    }
+
     public Book(String title, String isbn, Set<Author> authors) {
         this.title = title;
         this.isbn = isbn;
+        this.authors = authors;
+    }
+
+    public Book(String title, String isbn, Publisher publisher, Set<Author> authors) {
+        this.title = title;
+        this.isbn = isbn;
+        this.publisher = publisher;
         this.authors = authors;
     }
 
@@ -82,6 +95,24 @@ public class Book {
 
     public Book setAuthors(Set<Author> authors) {
         this.authors = authors;
+        return this;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Book setId(Long id) {
+        this.id = id;
+        return this;
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    public Book setPublisher(Publisher publisher) {
+        this.publisher = publisher;
         return this;
     }
 }
